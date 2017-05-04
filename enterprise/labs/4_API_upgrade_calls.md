@@ -10,3 +10,6 @@ Report the CM version
 List all CM users
 Report the database server in use by CM
 Add these API calls and their output to enterprise/labs/4_API_upgrade_calls.md
+
+
+Step 1: Collect Upgrade Information
