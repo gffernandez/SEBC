@@ -30,7 +30,7 @@ student to help you fix it.
 When everything works as expected, push your course to GitHub:
 
 * `$ git add .`
-* `$ git commit -m "Pushing course materials for Madrid, March 2017 session"`
+* `$ git commit -m "Pushing course materials for Sydney, May 2017 session"`
 * `$ git push -u upstream master`
 
 Browse your GitHub repository to see your local files have copied to it.
