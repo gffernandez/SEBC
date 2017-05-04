@@ -1,8 +1,8 @@
 # Kerberos
 
-Create a Linux user named after your GitHub handle
-You'll use this account to test access to the cluster
-Make sure this account is present on all nodes with the same UID/GID
+Create a Linux user named after your GitHub handle.
+You'll use this account to test access to the cluster.
+Make sure this account is present on all nodes with the same UID/GID.
 ```
 $ sudo su
 $ useradd gffernandez
