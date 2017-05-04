@@ -1,0 +1,3 @@
+ Creating KDC database to hold our sensitive Kerberos data
+ $ kdb5_util create -r AMAZONAWS.COM -s
+ key: cloudera

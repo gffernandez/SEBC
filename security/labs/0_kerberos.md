@@ -1,3 +1,4 @@
+# Kerberos
 
 Create a Linux user named after your GitHub handle
 You'll use this account to test access to the cluster
@@ -35,34 +36,7 @@ cat /etc/krb5.conf
 
 /etc/krb5.conf
 -------------------------------------------------------------------
-# Configuration snippets may be placed in this directory as well
-includedir /etc/krb5.conf.d/
-
-[logging]
- default = FILE:/var/log/krb5libs.log
- kdc = FILE:/var/log/krb5kdc.log
- admin_server = FILE:/var/log/kadmind.log
-
-[libdefaults]
- dns_lookup_realm = false
- ticket_lifetime = 24h
- renew_lifetime = 7d
- forwardable = true
- rdns = false
- default_realm = AMAZONAWS.COM
- default_ccache_name = KEYRING:persistent:%{uid}
-
-[realms]
- AMAZONAWS.COM = {
-  kdc = ip-172-31-34-165.us-west-2.compute.internal
-  admin_server = ip-172-31-34-165.us-west-2.compute.internal
- }
-
-[domain_realm]
- .amazonaws.com = AMAZONAWS.COM
- amazonaws.com = AMAZONAWS.COM
 -------------------------------------------------------------------
-
 
 cp /var/kerberos/krb5kdc/kdc.conf /var/kerberos/krb5kdc/kdc.conf.backup
 rm /var/kerberos/krb5kdc/kdc.conf
@@ -71,20 +45,6 @@ cat /var/kerberos/krb5kdc/kdc.conf
 
 /var/kerberos/krb5kdc/kdc.conf
 -------------------------------------------------------------------
-[kdcdefaults]
- kdc_ports = 88
- kdc_tcp_ports = 88
-
-[realms]
- AMAZONAWS.COM = {
-  #master_key_type = aes256-cts
-  acl_file = /var/kerberos/krb5kdc/kadm5.acl
-  dict_file = /usr/share/dict/words
-  admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
-  supported_enctypes = aes256-cts:normal aes128-cts:normal des3-hmac-sha1:normal arcfour-hmac:normal camellia256-cts:normal camellia128-cts:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
-max_life = 1d  
-max_renewable_life = 7d
- }
 -------------------------------------------------------------------
 
 
@@ -99,9 +59,6 @@ max_renewable_life = 7d
  
  /var/kerberos/krb5kdc/kadm5.acl
  -------------------------------------------------------------------
- Creating KDC database to hold our sensitive Kerberos data
- $ kdb5_util create -r AMAZONAWS.COM -s
- key: cloudera
  -------------------------------------------------------------------
  
  
@@ -144,8 +101,6 @@ yum install krb5-workstation
 kadmin -p root/admin
 kadmin:  addprinc -randkey host/client.amazonaws.com
 kadmin:  ktadd host/kdc.amazonaws.com
-
-
 		
 	
 		
