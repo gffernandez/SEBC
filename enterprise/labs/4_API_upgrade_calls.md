@@ -11,6 +11,7 @@ List all CM users
 Report the database server in use by CM
 Add these API calls and their output to enterprise/labs/4_API_upgrade_calls.md
 
+https://www.cloudera.com/documentation/enterprise/latest/topics/cm_ag_ug_cm5.html
 
 ## Step 1: Collect Upgrade Information
 
@@ -159,6 +160,39 @@ baseurl=https://archive.cloudera.com/cm5/redhat/6/x86_64/cm/5.9/
 Run the following command to clean the cache directories and upgrade the software:
 sudo yum clean all
 sudo yum upgrade cloudera-manager-server cloudera-manager-daemons cloudera-manager-agent
+
+
+If you customized the /etc/cloudera-scm-agent/config.ini file, your customized file is renamed with the extension .rpmsave or .dpkg-old. 
+Merge any customizations into the /etc/cloudera-scm-agent/config.ini file that is installed by the package manager.
+
+
+On the Cloudera Manager Server host, verify that you now have the following packages, corresponding to the version of Cloudera Manager you installed, by running the following command:
+$ rpm -qa 'cloudera-manager-*'
+cloudera-manager-agent-5.11.0-1.cm5110.p0.101.el7.x86_64
+cloudera-manager-daemons-5.11.0-1.cm5110.p0.101.el7.x86_64
+cloudera-manager-server-5.11.0-1.cm5110.p0.101.el7.x86_64
+
+Start Cloudera Manager Server. 
+On the Cloudera Manager Server host (the host on which you installed the cloudera-manager-server package), do the following:
+
+Start the Cloudera Manager Server:
+$ sudo service cloudera-scm-server start
+
+Log in to the Cloudera Manager Admin Console. 
+It can take several minutes for Cloudera Manager Server to start, and the console is unavailable until the server startup is complete.
+The Upgrade Wizard displays.
+
+http://ec2-54-191-132-13.us-west-2.compute.amazonaws.com:7180/
+
+admin / cloudera
+
+
+
+Upgrade the Cloudera Manager Agent using Cloudera Manager or by manually upgrading the packages:
+
+
+
+
 
 
 
