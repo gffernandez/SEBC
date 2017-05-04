@@ -1,13 +1,19 @@
+# Preinstall
+
+## Swapiness
+```
 
 $ cat /proc/sys/vm/swappiness
 $ sudo sysctl vm.swappiness=1
+```
 
-
+Disable transparent hugepage support
+```
 $ sudo su
 $ echo never > /sys/kernel/mm/transparent_hugepage/enabled
 $ cat /sys/kernel/mm/transparent_hugepage/enabled
 [always] madvise never
-
+```
 
 $ netstat -i
 Kernel Interface table
