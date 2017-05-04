@@ -172,6 +172,7 @@ $ sudo yum install cloudera-manager-daemons cloudera-manager-server
 Start the Cloudera Manager Server
 ```
 $ sudo service cloudera-scm-server start
+tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
 ```
 
 Configuring and Starting the MySQL Server
