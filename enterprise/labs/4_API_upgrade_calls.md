@@ -196,7 +196,7 @@ Upgrade the Cloudera Manager Agent using Cloudera Manager or by manually upgradi
 
 
 
-
+sudo service cloudera-scm-agent start
 
 
 
