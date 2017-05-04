@@ -147,9 +147,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 Python-PostgreSQL Database Adapter
+```
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
-
 pip install psycopg2
 ```
 
