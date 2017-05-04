@@ -156,7 +156,7 @@ Select Category > Security.
 Locate the Superuser Group property and change the value to the appropriate group name for your environment. For example, <superuser>.
 Click Save Changes to commit the changes.
 Restart the HDFS service.
-To enable your access to the superuser account now that Kerberos is enabled, you must now create a Kerberos principal or an Active Directory user whose first component is <superuser>:
+To enable your access to the superuser account now that Kerberos is enabled, you must now create a Kerberos principal or an Active Directory user whose first component is <superuser>.
 
 
 
