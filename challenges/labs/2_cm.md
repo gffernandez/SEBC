@@ -80,12 +80,17 @@ sudo yum install cloudera-manager-daemons cloudera-manager-server
 ```
 
 
+/usr/share/cmf/schema/scm_prepare_database.sh mysql scm scm scm
+
+
 ------------------------------------------------------------------------
 Start the Cloudera Manager Server
 ```
 $ sudo service cloudera-scm-server start
 tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
 ```
+
+
 
 Configuring and Starting the MySQL Server
 ```
@@ -155,10 +160,12 @@ sudo find / -name "scm_prepare_database*" -print
 ```
 Prepare databases
 ```
-/usr/share/cmf/schema/scm_prepare_database.sh mysql scm scm scm_password
-/usr/share/cmf/schema/scm_prepare_database.sh mysql rman rman rman_password
-/usr/share/cmf/schema/scm_prepare_database.sh mysql hive hive hive_password
-/usr/share/cmf/schema/scm_prepare_database.sh mysql oozie oozie oozie_password
-/usr/share/cmf/schema/scm_prepare_database.sh mysql hue hue hue_password
-/usr/share/cmf/schema/scm_prepare_database.sh mysql sentry sentry sentry_password
+/usr/share/cmf/schema/scm_prepare_database.sh mysql scm scm scm
+/usr/share/cmf/schema/scm_prepare_database.sh mysql rman rman rman
+/usr/share/cmf/schema/scm_prepare_database.sh mysql hive hive hive
+/usr/share/cmf/schema/scm_prepare_database.sh mysql oozie oozie oozie
+/usr/share/cmf/schema/scm_prepare_database.sh mysql hue hue hue
+/usr/share/cmf/schema/scm_prepare_database.sh mysql sentry sentry sentry
 ```
+
+

@@ -56,6 +56,16 @@ create database hue default character set utf8 default collate utf8_general_ci;
 grant all on hue.* to 'hue'@'%' identified by 'hue_password';
 create database sentry DEFAULT CHARACTER SET utf8;
 grant all on sentry.* TO 'sentry'@'%' IDENTIFIED BY 'sentry_password';
+
+
+
+grant all on scm.* to 'scm'@'localhost' identified by 'scm';
+grant all on rman.* to 'rman'@'localhost' identified by 'rman';
+grant all on hive.* to 'hive'@'localhost' identified by 'hive';
+grant all on oozie.* to 'oozie'@'localhost' identified by 'oozie';
+grant all on hue.* to 'hue'@'localhost' identified by 'hue';
+grant all on sentry.* to 'sentry'@'localhost' identified by 'sentry';
+
 ```
 
 Copy java jdbc driver to oozie folder
