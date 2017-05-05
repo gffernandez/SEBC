@@ -60,11 +60,16 @@ grant all on sentry.* TO 'sentry'@'%' IDENTIFIED BY 'sentry_password';
 
 
 grant all on scm.* to 'scm'@'localhost' identified by 'scm';
-grant all on rman.* to 'rman'@'localhost' identified by 'rman';
-grant all on hive.* to 'hive'@'localhost' identified by 'hive';
-grant all on oozie.* to 'oozie'@'localhost' identified by 'oozie';
-grant all on hue.* to 'hue'@'localhost' identified by 'hue';
-grant all on sentry.* to 'sentry'@'localhost' identified by 'sentry';
+grant all on rman.* to 'rman'@'ip-172-31-13-165.us-west-2.compute.internal' identified by 'rman';
+grant all on hive.* to 'hive'@'ip-172-31-13-165.us-west-2.compute.internal' identified by 'hive';
+grant all on hue.* to 'hue'@'ip-172-31-13-165.us-west-2.compute.internal' identified by 'hue';
+grant all on oozie.* to 'oozie'@'ip-172-31-13-165.us-west-2.compute.internal' identified by 'oozie';
+
+
+grant all on hive.* to 'hive'@'grant all on rman.* to 'rman'@'ip-172-31-13-165.us-west-2.compute.internal' identified by 'rman';' identified by 'hive';
+grant all on oozie.* to 'oozie'@'grant all on rman.* to 'rman'@'ip-172-31-13-165.us-west-2.compute.internal' identified by 'rman';' identified by 'oozie';
+grant all on hue.* to 'hue'@'grant all on rman.* to 'rman'@'ip-172-31-13-165.us-west-2.compute.internal' identified by 'rman';' identified by 'hue';
+grant all on sentry.* to 'sentry'@'grant all on rman.* to 'rman'@'ip-172-31-13-165.us-west-2.compute.internal' identified by 'rman';' identified by 'sentry';
 
 ```
 
