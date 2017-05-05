@@ -38,8 +38,8 @@ Could not contact any CDS load balancers: rhui2-cds01.us-west-2.aws.ce.redhat.co
 
 
 ## Add the following Linux accounts to all nodes (on all nodes)
-$ sudo useradd -u 2300 cate 
-$ sudo useradd -u 2900 jemaine
+sudo useradd -u 2300 cate 
+sudo useradd -u 2900 jemaine
 sudo su
 groupadd kiwis
 groupadd aussies
