@@ -64,6 +64,32 @@ sudo mkdir -p /var/lib/oozie/
 sudo cp mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar /var/lib/oozie/mysql-connector-java-5.1.42-bin.jar
 ```
 
+The hostname of your db server node
+34.209.25.194
+
+The command and output for display your database server's version
+$ mysql -V
+mysql  Ver 14.14 Distrib 5.6.36, for Linux (x86_64) using  EditLine wrapper
+
+The command and output for listing your created databases
+mysql> SHOW DATABASES
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| hive               |
+| hue                |
+| mysql              |
+| oozie              |
+| performance_schema |
+| rman               |
+| scm                |
+| sentry             |
++--------------------+
+9 rows in set (0.00 sec)
+
+
 
 
 --FOR LATER--
