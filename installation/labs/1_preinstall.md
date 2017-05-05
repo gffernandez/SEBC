@@ -265,7 +265,6 @@ sudo mkdir -p /var/lib/oozie/
 sudo cp /usr/share/java/mysql-connector-java-5.1.42-bin.jar /var/lib/oozie/mysql-connector-java-5.1.42-bin.jar
 ```
 
-
 /usr/share/cmf/schema/scm_prepare_database.sh [options] (postgresql|mysql|oracle) database username [password]
 
 Show prepare database command location

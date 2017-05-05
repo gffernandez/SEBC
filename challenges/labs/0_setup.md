@@ -36,9 +36,10 @@ Repo rhui-REGION-rhel-server-rh-common forced skip_if_unavailable=True due to: /
 Could not contact CDS load balancer rhui2-cds01.us-west-2.aws.ce.redhat.com, trying others.
 Could not contact any CDS load balancers: rhui2-cds01.us-west-2.aws.ce.redhat.com, rhui2-cds02.us-west-2.aws.ce.redhat.com.
 
-## Add the following Linux accounts to all nodes
-$ sudo useradd -u 2300 cate (on all nodes)
-$ sudo useradd -u 2900 jemaine (on all nodes)
+
+## Add the following Linux accounts to all nodes (on all nodes)
+$ sudo useradd -u 2300 cate 
+$ sudo useradd -u 2900 jemaine
 sudo su
 groupadd kiwis
 groupadd aussies
@@ -46,6 +47,7 @@ usermod -G kiwis jemaine
 usermod -G aussies cate
 
 
+## List users and groups
 $ cat /etc/passwd/
 $ cat /etc/passwd | grep cate
 cate:x:2300:2300::/home/cate:/bin/bash
