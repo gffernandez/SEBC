@@ -168,10 +168,5 @@ Prepare databases
 /usr/share/cmf/schema/scm_prepare_database.sh mysql sentry sentry sentry
 ```
 
-## Add the complete line that contains the phrase "Started Jetty server"
-
-cat /var/log/cloudera-scm-server/cloudera-scm-server.log | grep Jetty
-2017-05-04 21:58:55,117 INFO WebServerImpl:com.cloudera.server.cmf.WebServerImpl: Started Jetty server.
-
 
 
